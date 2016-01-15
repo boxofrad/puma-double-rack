@@ -1,0 +1,20 @@
+/usr/bin/ruby2.1 extconf.rb
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling http11_parser.c
+compiling puma_http11.c
+compiling io_buffer.c
+compiling mini_ssl.c
+In file included from mini_ssl.c:4:0:
+/usr/include/ruby-2.1.0/ruby/backward/rubyio.h:2:2: warning: #warning use "ruby/io.h" instead of "rubyio.h" [-Wcpp]
+linking shared-object puma/puma_http11.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20160115-8015-3flyei/puma
+installing default puma_http11 libraries
